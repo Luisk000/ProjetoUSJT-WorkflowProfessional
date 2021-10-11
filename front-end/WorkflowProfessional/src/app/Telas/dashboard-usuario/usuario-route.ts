@@ -15,6 +15,8 @@ const usuarioRouterConfig: Routes = [
 
       { path: '', component: DashboardUsuarioComponent },
 
+      { path: 'home', component: DashboardUsuarioComponent },
+
       { path: 'areas-mais', component: AreasMaisComponent },
 
       { path: 'cadastro-usuario', component: CadastroUsuarioComponent },      

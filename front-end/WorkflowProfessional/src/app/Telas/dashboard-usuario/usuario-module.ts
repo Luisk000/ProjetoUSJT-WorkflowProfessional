@@ -10,6 +10,11 @@ import { Top20Component } from './dashboard-usuario/top-20/top-20.component';
 import { DetalhesVagasComponent } from './dashboard-usuario/detalhes-vagas/detalhes-vagas.component';
 import { VagasUsuarioComponent } from './dashboard-usuario/vagas-usuario/vagas-usuario.component';
 import { CadastroUsuarioComponent } from './dashboard-usuario/cadastro-usuario/cadastro-usuario.component';
+import { MenuUsuarioComponent } from './dashboard-usuario/menu-usuario/menu-usuario.component';
+import { RodapeUsuarioComponent } from './dashboard-usuario/rodape-usuario/rodape-usuario.component';
+import { RouterModule } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 @NgModule({
   declarations: [
@@ -19,13 +24,18 @@ import { CadastroUsuarioComponent } from './dashboard-usuario/cadastro-usuario/c
     CadastroUsuarioComponent,
     Top20Component,
     DetalhesVagasComponent,
-    VagasUsuarioComponent
+    VagasUsuarioComponent,
+    MenuUsuarioComponent,
+    RodapeUsuarioComponent
   ],
   imports: [
     CommonModule,    
     FormsModule,
     HttpClientModule,
-    UsuarioRoutingModule    
+    UsuarioRoutingModule,    
+    RouterModule,
+    NgbModule,
+    CollapseModule.forRoot(),
   ],  
   providers: []
 })

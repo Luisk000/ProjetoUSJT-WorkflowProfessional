@@ -8,6 +8,11 @@ import { VagasAdminComponent } from './dashboard-admin/vagas-admin/vagas-admin.c
 import { CadastrarVagaAdminComponent } from './dashboard-admin/vagas-admin/cadastrar-vaga-admin/cadastrar-vaga-admin.component';
 import { AdminComponent } from './admin.component';
 import { AdminRoutingModule } from './admin-route';
+import { RouterModule } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { MenuAdminComponent } from './dashboard-admin/menu-admin/menu-admin.component';
+import { RodapeAdminComponent } from './dashboard-admin/rodape-admin/rodape-admin.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +20,17 @@ import { AdminRoutingModule } from './admin-route';
     DashboardAdminComponent,
     CadastroAdminComponent,
     VagasAdminComponent,
-    CadastrarVagaAdminComponent
+    CadastrarVagaAdminComponent,
+    MenuAdminComponent,
+    RodapeAdminComponent
   ],
   imports: [
-    CommonModule,    
+    CommonModule,
+    RouterModule,
+    NgbModule,
     FormsModule,
+    CollapseModule.forRoot(),  
+    CommonModule,
     HttpClientModule,
     AdminRoutingModule    
   ],  

@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './Telas/home/home.component';
 
 const routes: Routes = [
 
+  { path: '', component: HomeComponent},
+  
   { path: 'admin', loadChildren: () => import('./Telas/dashboard-admin/admin-module').then(m => m.AdminModule) },
 
-  { path: '', loadChildren: () => import('./Telas/dashboard-usuario/usuario-module').then(m => m.UsuarioModule) }
+  { path: 'usuario', loadChildren: () => import('./Telas/dashboard-usuario/usuario-module').then(m => m.UsuarioModule) }
 
 ];
 

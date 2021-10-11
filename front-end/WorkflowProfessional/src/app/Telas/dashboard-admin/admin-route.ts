@@ -13,6 +13,8 @@ const adminRouterConfig: Routes = [
 
       { path: '', component: DashboardAdminComponent },
 
+      { path: 'home', component: DashboardAdminComponent },
+
       { path: 'cadastro-admin', component: CadastroAdminComponent },
 
       { path: 'vagas-admin', component: VagasAdminComponent,

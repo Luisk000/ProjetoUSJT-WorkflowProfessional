@@ -4,17 +4,21 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavegacaoModule } from './Navegacao/navegacao.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './Telas/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    NavegacaoModule,    
-    FormsModule
+    AppRoutingModule,    
+    FormsModule, 
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
