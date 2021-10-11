@@ -17,12 +17,7 @@ const adminRouterConfig: Routes = [
 
       { path: 'cadastro', component: CadastroAdminComponent },
 
-      { path: 'vagas', component: VagasAdminComponent,
-
-        children: [
-            {path: 'cadastro', component: CadastrarVagaAdminComponent}
-        ]
-      }    
+      { path: 'vagas', component: VagasAdminComponent }    
     ]
   }
 ]

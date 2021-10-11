@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-vagas-admin',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VagasAdminComponent implements OnInit {
 
-  constructor() { }
+  public novaVaga = false;
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  cadastrarVaga(){
+    this.novaVaga = true;
   }
 
 }

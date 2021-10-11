@@ -1,5 +1,41 @@
 <app-menu-usuario></app-menu-usuario>
-<p>
-  areas-mais works!
-</p>
+
+<div class="container main-container">
+  <div class="container">
+    <div class="painel">
+      <div class="painel-topo">
+        <h1>Vagas</h1>
+      </div>
+
+      <div class="linha-botao-cadastrar">        
+          <button class="btn btn-success botao-cadastrar">Cadastrar Vaga</button>
+      </div>
+
+      <div class="row painel-corpo">
+        <div class="row titulos">
+          <div class="col-4 titulo-coluna-1"><span>Vaga</span></div>
+          <div class="col-4 titulo-coluna-2"><span>Descrição</span></div>
+          <div class="col-3 titulo-coluna-2"><span>Ação</span></div>
+        </div>
+        
+        <div *ngIf="false" class="row conteudo">
+          <div class="col-4 conteudo-coluna-1"><span>Programador C#</span></div>
+          <div class="col-4 conteudo-coluna-2"><span>Trabalhar home office</span></div>
+          <div class="col-3 conteudo-coluna-3">
+            <span class="botoes">
+              <button class="btn btn-warning botao-editar">Editar</button>
+              <button class="btn btn-danger botao-voltar">Excluir</button>
+            </span>
+          </div>
+        </div>
+
+        <div *ngIf="true" class="row conteudo">
+          <div class="col-6 sem-conteudo"><span>Não possui vagas cadastradas</span></div>          
+        </div>
+
+      </div>
+    </div>    
+  </div>
+</div>
+
 <app-rodape-usuario></app-rodape-usuario>
