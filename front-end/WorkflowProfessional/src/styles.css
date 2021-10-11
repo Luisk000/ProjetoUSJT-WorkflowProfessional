@@ -9,10 +9,6 @@
     overflow: hidden;
 }
 
-.espaco{
-    margin-left: 15px;
-}
-
 .homeButton{
     margin-top: 3%;
     margin-right: 3%;
@@ -41,3 +37,5 @@
         overflow: hidden;
     }
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
