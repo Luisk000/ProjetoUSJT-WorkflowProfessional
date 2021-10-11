@@ -1,0 +1,30 @@
+<app-menu-admin></app-menu-admin>
+
+<div class="container main-container">
+  <div class="container">
+    <div class="painel">
+      <div class="painel-topo">
+        <h1>Candidatos Inscritos</h1>
+      </div>
+      <div class="row painel-corpo">
+        <div class="row titulos">
+          <div class="col-5 titulo-coluna-1"><span>Vaga</span></div>
+          <div class="col-5 titulo-coluna-2"><span>Candidato</span></div>
+        </div>
+        
+        <div *ngIf="false" class="row conteudo">
+          <div class="col-5 conteudo-coluna-1"><span>Programador C#</span></div>
+          <div class="col-5 conteudo-coluna-2"><span>Pedro Alves</span></div>
+        </div>
+
+        <div *ngIf="true" class="row conteudo">
+          <div class="col-6 sem-conteudo"><span>Não possui candidatos inscritos</span></div>          
+        </div>
+
+      </div>
+    </div>    
+  </div>
+</div>
+
+
+<app-rodape-admin></app-rodape-admin>

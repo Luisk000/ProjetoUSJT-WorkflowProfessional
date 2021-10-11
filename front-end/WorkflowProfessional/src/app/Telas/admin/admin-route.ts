@@ -1,9 +1,9 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
-import { CadastroAdminComponent } from './dashboard-admin/cadastro-admin/cadastro-admin.component';
-import { VagasAdminComponent } from './dashboard-admin/vagas-admin/vagas-admin.component';
-import { CadastrarVagaAdminComponent } from './dashboard-admin/vagas-admin/cadastrar-vaga-admin/cadastrar-vaga-admin.component';
+import { CadastroAdminComponent } from './cadastro-admin/cadastro-admin.component';
+import { VagasAdminComponent } from './vagas-admin/vagas-admin.component';
+import { CadastrarVagaAdminComponent } from './vagas-admin/cadastrar-vaga-admin/cadastrar-vaga-admin.component';
 import { AdminComponent } from './admin.component';
 
 const adminRouterConfig: Routes = [
@@ -15,9 +15,9 @@ const adminRouterConfig: Routes = [
 
       { path: 'home', component: DashboardAdminComponent },
 
-      { path: 'cadastro-admin', component: CadastroAdminComponent },
+      { path: 'cadastro', component: CadastroAdminComponent },
 
-      { path: 'vagas-admin', component: VagasAdminComponent,
+      { path: 'vagas', component: VagasAdminComponent,
 
         children: [
             {path: 'cadastro', component: CadastrarVagaAdminComponent}

@@ -18,13 +18,13 @@ export class MenuAdminComponent implements OnInit {
       admin: false
     },
     {
-      link: '/admin/vagas-admin',
+      link: '/admin/vagas',
       name: 'Vagas',
       exact: true,
       admin: false
     },
     {
-      link: '/admin/cadastro-admin',
+      link: '/admin/cadastro',
       name: 'Cadastro',
       exact: true,
       admin: false

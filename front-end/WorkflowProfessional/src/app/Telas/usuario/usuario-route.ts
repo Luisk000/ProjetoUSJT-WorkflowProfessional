@@ -2,11 +2,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { UsuarioComponent } from './usuario.component';
 import { DashboardUsuarioComponent } from './dashboard-usuario/dashboard-usuario.component';
-import { AreasMaisComponent } from './dashboard-usuario/areas-mais/areas-mais.component';
-import { CadastroUsuarioComponent } from './dashboard-usuario/cadastro-usuario/cadastro-usuario.component';
-import { DetalhesVagasComponent } from './dashboard-usuario/detalhes-vagas/detalhes-vagas.component';
-import { Top20Component } from './dashboard-usuario/top-20/top-20.component';
-import { VagasUsuarioComponent } from './dashboard-usuario/vagas-usuario/vagas-usuario.component';
+import { AreasMaisComponent } from './areas-mais/areas-mais.component';
+import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
+import { DetalhesVagasComponent } from './detalhes-vagas/detalhes-vagas.component';
+import { Top20Component } from './top-20/top-20.component';
+import { VagasUsuarioComponent } from './vagas-usuario/vagas-usuario.component';
 
 const usuarioRouterConfig: Routes = [
   {

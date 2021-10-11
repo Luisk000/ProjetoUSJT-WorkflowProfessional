@@ -6,9 +6,9 @@ const routes: Routes = [
 
   { path: '', component: HomeComponent},
   
-  { path: 'admin', loadChildren: () => import('./Telas/dashboard-admin/admin-module').then(m => m.AdminModule) },
+  { path: 'admin', loadChildren: () => import('./Telas/admin/admin-module').then(m => m.AdminModule) },
 
-  { path: 'usuario', loadChildren: () => import('./Telas/dashboard-usuario/usuario-module').then(m => m.UsuarioModule) }
+  { path: 'usuario', loadChildren: () => import('./Telas/usuario/usuario-module').then(m => m.UsuarioModule) }
 
 ];
 

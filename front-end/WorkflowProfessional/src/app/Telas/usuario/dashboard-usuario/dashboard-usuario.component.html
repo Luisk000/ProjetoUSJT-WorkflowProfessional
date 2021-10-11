@@ -1,0 +1,27 @@
+<app-menu-usuario></app-menu-usuario>
+<div class="container main-container">
+  <div class="container">
+    <div class="painel">
+      <div class="painel-topo">
+        <h1>Vagas Inscritas</h1>
+      </div>
+      <div class="row painel-corpo">
+        <div class="row titulos">
+          <div class="col-5 titulo-coluna-1"><span>Empresa</span></div>
+          <div class="col-5 titulo-coluna-2"><span>Vaga</span></div>
+        </div>
+        
+        <div *ngIf="false" class="row conteudo">
+          <div class="col-5 conteudo-coluna-1"><span>TI Specialist</span></div>
+          <div class="col-5 conteudo-coluna-2"><span>Programador C#</span></div>
+        </div>
+
+        <div *ngIf="true" class="row conteudo">
+          <div class="col-6 sem-conteudo"><span>Não se candidatou a nenhuma vaga</span></div>          
+        </div>
+
+      </div>
+    </div>    
+  </div>
+</div>
+<app-rodape-usuario></app-rodape-usuario>
