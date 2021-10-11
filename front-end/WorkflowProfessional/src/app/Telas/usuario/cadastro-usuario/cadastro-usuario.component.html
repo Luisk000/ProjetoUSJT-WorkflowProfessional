@@ -1,5 +1,72 @@
 <app-menu-usuario></app-menu-usuario>
-<p>
-  cadastro-usuario works!
-</p>
+
+<div class="container main-container">
+  <div class="container">
+    <h4 class="paragrafo">Cadastro</h4>
+    <hr class="paragrafo"/>
+    <form novalidate (ngSubmit)="adicionarAdministrador()" [formGroup]="cadastroForm">
+      <div class="form-horizontal">
+
+        <div class="form-group">
+          <label class="col-md-3 col-sm-5 control-label" for="nome">Digite seu nome</label>
+          <div class="col-md-10">
+            <input class="form-control" id="nome" type="text" placeholder="Nome (requerido)" formControlName="nome" 
+            [ngClass]="{'is-invalid': displayMessage.nome}"/>
+            <span class="text-danger" *ngIf="displayMessage.nome">
+              <p [innerHTML]="displayMessage.nome"></p>
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-3 col-sm-5 control-label" for="dataNasc">Digite a data de nascimento</label>
+          <div class="col-md-10">
+            <input class="form-control" id="dataNasc" type="text" placeholder="Data de Nascimento (requerido)" formControlName="dataNasc" 
+            [ngClass]="{'is-invalid': displayMessage.dataNasc}" date/>
+            <span class="text-danger" *ngIf="displayMessage.dataNasc">
+              <p [innerHTML]="displayMessage.dataNasc"></p>
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-3 col-sm-5 control-label" for="profissao">Digite a profissao</label>
+          <div class="col-md-10">
+            <input class="form-control" id="profissao" type="text" placeholder="Profissao (requerido)" formControlName="profissao" 
+            [ngClass]="{'is-invalid': displayMessage.profissao}"/>
+            <span class="text-danger" *ngIf="displayMessage.profissao">
+              <p [innerHTML]="displayMessage.profissao"></p>
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-5 col-sm-6 control-label" for="expProfissional">Digite a experiência profissional</label>
+          <div class="col-md-10">
+            <textarea class="form-control" id="expProfissional" type="text" placeholder="Experiência Profissional" 
+            formControlName="expProfissional" rows="7"></textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-3 col-sm-5 control-label" for="cursos">Digite os cursos</label>
+          <div class="col-md-10">
+            <textarea class="form-control" id="cursos" type="text" 
+            placeholder="Cursos" formControlName="cursos" rows="7"></textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-4 col-md-offset-2">
+            <span>
+              <button class="btn btn-primary" id="Registrar" [disabled]="!cadastroForm.valid" type="submit">Salvar Alterações</button>
+              <button class="btn btn-danger botao-voltar" (click)="voltarDashboard()">Voltar</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
 <app-rodape-usuario></app-rodape-usuario>

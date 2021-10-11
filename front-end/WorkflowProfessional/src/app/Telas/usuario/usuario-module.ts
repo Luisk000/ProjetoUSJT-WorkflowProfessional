@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UsuarioRoutingModule } from './usuario-route';
 import { UsuarioComponent } from './usuario.component';
@@ -15,6 +15,11 @@ import { RodapeUsuarioComponent } from './rodape-usuario/rodape-usuario.componen
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { MatDialogModule } from '@angular/material/dialog';
+import { NgBrazil } from 'ng-brazil';
+import { TextMaskModule } from 'angular2-text-mask';
+import { CustomFormsModule } from 'ng2-validation';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 @NgModule({
   declarations: [
@@ -36,6 +41,12 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
     RouterModule,
     NgbModule,
     CollapseModule.forRoot(),
+    ReactiveFormsModule,
+    MatDialogModule,
+    NgBrazil,
+    TextMaskModule,
+    CustomFormsModule,
+    CurrencyMaskModule
   ],  
   providers: []
 })
