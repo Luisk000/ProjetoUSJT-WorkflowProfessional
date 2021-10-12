@@ -8,15 +8,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class VagasAdminComponent implements OnInit {
 
-  public novaVaga = false;
-
-  constructor(private router: Router) { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
 
   cadastrarVaga(){
-    this.novaVaga = true;
+    this.router.navigate(['vagas-cadastro'], { relativeTo: this.route});
   }
 
 }

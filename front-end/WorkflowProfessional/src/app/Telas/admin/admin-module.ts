@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 import { CadastroAdminComponent } from './cadastro-admin/cadastro-admin.component';
-import { VagasAdminComponent } from './vagas-admin/vagas-admin.component';
 import { CadastrarVagaAdminComponent } from './vagas-admin/cadastrar-vaga-admin/cadastrar-vaga-admin.component';
 import { AdminComponent } from './admin.component';
 import { AdminRoutingModule } from './admin-route';
@@ -17,10 +16,13 @@ import { NgBrazil } from 'ng-brazil';
 import { TextMaskModule } from 'angular2-text-mask';
 import { CustomFormsModule } from 'ng2-validation';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { VagasAdminComponent } from './vagas-admin/vaga-admin/vagas-admin.component';
+import { VagasComponent } from './vagas-admin/vagas.component';
 
 @NgModule({
   declarations: [
     AdminComponent,
+    VagasComponent,
     DashboardAdminComponent,
     CadastroAdminComponent,
     VagasAdminComponent,

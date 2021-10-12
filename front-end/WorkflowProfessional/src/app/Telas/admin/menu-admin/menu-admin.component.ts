@@ -20,7 +20,7 @@ export class MenuAdminComponent implements OnInit {
     {
       link: '/admin/vagas',
       name: 'Vagas',
-      exact: true,
+      exact: false,
       admin: false
     },
     {
