@@ -6,7 +6,7 @@ import { UsuarioRoutingModule } from './usuario-route';
 import { UsuarioComponent } from './usuario.component';
 import { DashboardUsuarioComponent } from './dashboard-usuario/dashboard-usuario.component';
 import { AreasMaisComponent } from './areas-mais/areas-mais.component';
-import { Top20Component } from './top-20/top-20.component';
+import { Top20Component } from './top-20-usuario/top-20/top-20.component';
 import { DetalhesVagasComponent } from './vagas-usuario/detalhes-vagas/detalhes-vagas.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
@@ -20,11 +20,13 @@ import { CustomFormsModule } from 'ng2-validation';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { VagaUsuarioComponent } from './vagas-usuario/vaga-usuario/vaga-usuario.component';
 import { VagaComponent } from './vagas-usuario/vaga.component';
+import { Top20UsuarioComponent } from './top-20-usuario/top20-usuario.component';
 
 @NgModule({
   declarations: [
     UsuarioComponent,
     VagaComponent,
+    Top20UsuarioComponent,
     DashboardUsuarioComponent,
     AreasMaisComponent,
     CadastroUsuarioComponent,

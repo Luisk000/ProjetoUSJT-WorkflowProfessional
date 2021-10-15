@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-detalhes-vagas',
@@ -8,13 +8,13 @@ import { Router } from '@angular/router';
 })
 export class DetalhesVagasComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private _location: Location) { }
 
   ngOnInit() {
   }
 
   voltarVagasUsuario(){
-    this.router.navigate(['usuario/vagas-usuario']);
+    this._location.back();
   }
 
 }

@@ -5,9 +5,10 @@ import { DashboardUsuarioComponent } from './dashboard-usuario/dashboard-usuario
 import { AreasMaisComponent } from './areas-mais/areas-mais.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { DetalhesVagasComponent } from './vagas-usuario/detalhes-vagas/detalhes-vagas.component';
-import { Top20Component } from './top-20/top-20.component';
+import { Top20Component } from './top-20-usuario/top-20/top-20.component';
 import { VagaUsuarioComponent } from './vagas-usuario/vaga-usuario/vaga-usuario.component';
 import { VagaComponent } from './vagas-usuario/vaga.component';
+import { Top20UsuarioComponent } from './top-20-usuario/top20-usuario.component';
 
 const usuarioRouterConfig: Routes = [
   {
@@ -22,11 +23,13 @@ const usuarioRouterConfig: Routes = [
 
       { path: 'cadastro-usuario', component: CadastroUsuarioComponent },      
 
-      { path: 'top-20', component: Top20Component,
+      { path: 'top-20', component: Top20UsuarioComponent,
         children: [
-            { path: 'detalhes-vagas-top20', component: DetalhesVagasComponent },
-        ] 
-      },
+          { path: '', component: Top20Component },
+
+          { path: 'detalhes-vaga', component: DetalhesVagasComponent },
+        ]
+      },       
 
       { path: 'vagas-usuario', component: VagaComponent,
         children: [

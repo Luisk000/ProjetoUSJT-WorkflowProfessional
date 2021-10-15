@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-20',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Top20Component implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
+  }
+
+  visualizarVaga(){
+    this.router.navigate(['detalhes-vaga'], { relativeTo: this.route});
   }
 
 }

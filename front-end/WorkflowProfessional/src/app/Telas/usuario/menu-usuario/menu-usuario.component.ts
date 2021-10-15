@@ -26,7 +26,7 @@ export class MenuUsuarioComponent implements OnInit {
     {
       link: '/usuario/top-20',
       name: 'TOP 20',
-      exact: true,
+      exact: false,
       admin: false
     },
     {
