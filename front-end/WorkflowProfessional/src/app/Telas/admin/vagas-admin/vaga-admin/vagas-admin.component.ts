@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,9 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./vagas-admin.component.css']
 })
 export class VagasAdminComponent implements OnInit {
+
+  @ViewChild('mdExcluir', { static: true })
+  public mdExcluir: any;
 
   constructor(private router: Router, private route: ActivatedRoute) { }
 
@@ -19,6 +22,12 @@ export class VagasAdminComponent implements OnInit {
 
   editarVaga(){
     this.router.navigate(['vagas-editar/1'], { relativeTo: this.route});
+  }
+
+  excluirVaga(){}
+
+  abrirExclusao(): void{
+    this.mdExcluir.show();
   }
 
 }

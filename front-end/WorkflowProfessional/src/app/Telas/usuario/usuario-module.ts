@@ -15,7 +15,6 @@ import { RodapeUsuarioComponent } from './rodape-usuario/rodape-usuario.componen
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
-import { MatDialogModule } from '@angular/material/dialog';
 import { NgBrazil } from 'ng-brazil';
 import { TextMaskModule } from 'angular2-text-mask';
 import { CustomFormsModule } from 'ng2-validation';
@@ -42,7 +41,6 @@ import { CurrencyMaskModule } from 'ng2-currency-mask';
     NgbModule,
     CollapseModule.forRoot(),
     ReactiveFormsModule,
-    MatDialogModule,
     NgBrazil,
     TextMaskModule,
     CustomFormsModule,

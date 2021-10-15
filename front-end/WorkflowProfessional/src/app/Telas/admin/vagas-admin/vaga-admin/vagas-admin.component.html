@@ -25,7 +25,7 @@
           <div class="col-3 conteudo-coluna-3">
             <span class="botoes">
               <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-              <button class="btn btn-danger botao-voltar">Excluir</button>
+              <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
             </span>
           </div>
           
@@ -34,7 +34,7 @@
           <div class="col-3 conteudo-coluna-3">
             <span class="botoes">
               <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-              <button class="btn btn-danger botao-voltar">Excluir</button>
+              <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
             </span>
           </div>
 
@@ -43,7 +43,7 @@
           <div class="col-3 conteudo-coluna-3">
             <span class="botoes">
               <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-              <button class="btn btn-danger botao-voltar">Excluir</button>
+              <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
             </span>
           </div>
           
@@ -52,7 +52,7 @@
           <div class="col-3 conteudo-coluna-3">
             <span class="botoes">
               <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-              <button class="btn btn-danger botao-voltar">Excluir</button>
+              <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
             </span>
           </div>
 
@@ -61,7 +61,7 @@
           <div class="col-3 conteudo-coluna-3">
             <span class="botoes">
               <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-              <button class="btn btn-danger botao-voltar">Excluir</button>
+              <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
             </span>
           </div>
           
@@ -70,7 +70,7 @@
           <div class="col-3 conteudo-coluna-3">
             <span class="botoes">
               <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-              <button class="btn btn-danger botao-voltar">Excluir</button>
+              <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
             </span>
           </div>
 
@@ -79,7 +79,7 @@
           <div class="col-3 conteudo-coluna-3">
             <span class="botoes">
               <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-              <button class="btn btn-danger botao-voltar">Excluir</button>
+              <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
             </span>
           </div>
           
@@ -88,7 +88,7 @@
           <div class="col-3 conteudo-coluna-3">
             <span class="botoes">
               <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-              <button class="btn btn-danger botao-voltar">Excluir</button>
+              <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
             </span>
           </div>
 
@@ -97,7 +97,7 @@
           <div class="col-3 conteudo-coluna-3">
             <span class="botoes">
               <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-              <button class="btn btn-danger botao-voltar">Excluir</button>
+              <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
             </span>
           </div>
           
@@ -106,7 +106,7 @@
           <div class="col-3 conteudo-coluna-3">
             <span class="botoes">
               <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-              <button class="btn btn-danger botao-voltar">Excluir</button>
+              <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
             </span>
           </div>
 
@@ -121,6 +121,67 @@
       </div>
     </div>    
   </div>
+</div>
+
+<!-- MODAL DETALHES -->
+
+<!-- GRID DETALHES -->
+
+<div bsModal ngDraggable [handle]="handler" [config]="{ignoreBackdropClick: true}" id="mdExcluir"
+    #mdExcluir="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mdExcluir"
+    aria-hidden="true">
+    <div class="modal-dialog div-detalhes modal-lg modal-dialog-centered ">
+        <div class="modal-content div-detalhes">
+            <div #handler class="modal-header">
+                <button type="button" class="close" (click)="mdExcluir.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="wrapper-flexbox">
+                    <h4 class="mr-30"></h4>
+                    <h4></h4>
+                </div>
+            </div>
+            <form >
+                <div class="modal-body" id="area-modalDetalhes">
+
+                    <!--Inicio Parte Superior Modal-->
+                    <!-- Botões -->
+                    <div class="row">
+
+                        <div class="col-xs-12">
+                            <button type="button" id="btnPdf" class="btn btn-labeled btn-danger" (click)="excluirVaga()">
+                            <span class="btn-label"> <i class="fa fa-file-pdf-o"></i> </span>Excluir
+                            </button>
+                        </div>
+
+                    </div>
+                    
+                    <!--Fim Parte Superior Modal-->                    
+
+                    <!--Inicio Movimentos-->
+
+                    <div class="meio-modal"></div>
+                   
+                    <!--Fim Movimentos-->
+
+                    
+
+                    <!--Inicio Parte Inferior Modal-->
+
+                    <div class="fim-modal"></div>
+                    
+                    <!--Fim Parte Inferior Modal-->
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" (click)="mdExcluir.hide();">
+                        FECHAR
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 
 <app-rodape-admin></app-rodape-admin>

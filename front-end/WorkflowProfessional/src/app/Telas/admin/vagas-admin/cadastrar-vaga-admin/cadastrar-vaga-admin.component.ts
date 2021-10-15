@@ -2,7 +2,6 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChildren } from '@ang
 import { FormBuilder, FormControlName, FormGroup, Validators } from '@angular/forms';
 import { DisplayMessage, GenericValidator, ValidationMessages } from 'src/app/Validacao/generic-form-validator';
 import { fromEvent, merge, Observable } from 'rxjs';
-import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { VagaAdmin } from '../../model-admin/vaga-admin';
 
@@ -23,7 +22,6 @@ export class CadastrarVagaAdminComponent implements OnInit, AfterViewInit {
   displayMessage: DisplayMessage = {};
 
   constructor(private fb: FormBuilder, 
-    private dialog: MatDialog,
     private router: Router) {
       
     this.validationMessages = {

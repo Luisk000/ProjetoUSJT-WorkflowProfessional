@@ -11,13 +11,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { RodapeAdminComponent } from './rodape-admin/rodape-admin.component';
-import { MatDialogModule } from '@angular/material/dialog';
 import { NgBrazil } from 'ng-brazil';
 import { TextMaskModule } from 'angular2-text-mask';
 import { CustomFormsModule } from 'ng2-validation';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { VagasAdminComponent } from './vagas-admin/vaga-admin/vagas-admin.component';
 import { VagasComponent } from './vagas-admin/vagas.component';
+import { AngularDraggableModule } from 'angular2-draggable';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -38,11 +39,12 @@ import { VagasComponent } from './vagas-admin/vagas.component';
     CollapseModule.forRoot(),
     AdminRoutingModule,
     ReactiveFormsModule,
-    MatDialogModule,
     NgBrazil,
     TextMaskModule,
     CustomFormsModule,
-    CurrencyMaskModule
+    CurrencyMaskModule,
+    AngularDraggableModule,
+    ModalModule.forRoot()
   ],  
   providers: []
 })

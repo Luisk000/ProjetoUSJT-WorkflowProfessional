@@ -1,6 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChildren } from '@angular/core';
 import { FormBuilder, FormControl, FormControlName, FormGroup, Validators } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { CustomValidators } from 'ng2-validation';
 import { Observable, fromEvent, merge } from 'rxjs';
@@ -24,7 +23,6 @@ export class CadastroUsuarioComponent implements OnInit {
   displayMessage: DisplayMessage = {};
 
   constructor(private fb: FormBuilder, 
-    private dialog: MatDialog,
     private router: Router) {
       
     this.validationMessages = {
