@@ -22,7 +22,9 @@ const adminRouterConfig: Routes = [
         children: [
           { path: '', component: VagasAdminComponent },
 
-          { path: 'vagas-cadastro', component: CadastrarVagaAdminComponent }
+          { path: 'vagas-cadastro', component: CadastrarVagaAdminComponent },
+
+          { path: 'vagas-editar/:id', component: CadastrarVagaAdminComponent }
         ]
       }
 

@@ -17,4 +17,8 @@ export class VagasAdminComponent implements OnInit {
     this.router.navigate(['vagas-cadastro'], { relativeTo: this.route});
   }
 
+  editarVaga(){
+    this.router.navigate(['vagas-editar/1'], { relativeTo: this.route});
+  }
+
 }

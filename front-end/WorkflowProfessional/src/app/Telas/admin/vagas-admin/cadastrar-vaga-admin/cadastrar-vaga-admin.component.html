@@ -1,7 +1,77 @@
 <app-menu-admin></app-menu-admin>
 
-<p>
-  cadastrar-vaga-admin works!
-</p>
+<div class="container main-container">
+  <div class="container">
+    <h4 class="paragrafo">Cadastro de Vaga</h4>
+    <hr class="paragrafo"/>
+    <form novalidate (ngSubmit)="adicionarVaga()" [formGroup]="cadastroVagaForm">
+      <div class="form-horizontal">
+
+        <div class="form-group">
+          <label class="col-md-3 col-sm-5 control-label" for="funcao">Digite a função</label>
+          <div class="col-md-10">
+            <input class="form-control" id="funcao" type="text" placeholder="Função (requerida)" formControlName="funcao" 
+            [ngClass]="{'is-invalid': displayMessage.funcao}"/>
+            <span class="text-danger" *ngIf="displayMessage.funcao">
+              <p [innerHTML]="displayMessage.funcao"></p>
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-3 col-sm-5 control-label" for="descricao">Digite a descrição</label>
+          <div class="col-md-10">
+            <input class="form-control" id="descricao" type="text" placeholder="Descrição (requerida)" formControlName="descricao" 
+            [ngClass]="{'is-invalid': displayMessage.descricao}"/>
+            <span class="text-danger" *ngIf="displayMessage.descricao">
+              <p [innerHTML]="displayMessage.descricao"></p>
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-3 col-sm-5 control-label" for="horario">Digite o horário de trabalho</label>
+          <div class="col-md-10">
+            <input class="form-control" id="horario" type="text" placeholder="Horário (requerido)" formControlName="horario" 
+            [ngClass]="{'is-invalid': displayMessage.horario}"/>
+            <span class="text-danger" *ngIf="displayMessage.horario">
+              <p [innerHTML]="displayMessage.horario"></p>
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-3 col-sm-5 control-label">Digite um salário</label>
+          <div class="col-md-10">
+            <input class="form-control" id="salario" formControlName="salario" type="text"
+            currencyMask
+            [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', align: 'left' }" 
+            [ngClass]="{'is-invalid': displayMessage.salario}" placeholder="R$ 0,00"/>
+            <span class="text-danger" *ngIf="displayMessage.salario">
+              <p [innerHTML]="displayMessage.salario"></p>
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-5 col-sm-6 control-label" for="beneficios">Digite os benefícios</label>
+          <div class="col-md-10">
+            <textarea class="form-control" id="beneficios" type="text" placeholder="Benefícios (requerido)" 
+            formControlName="beneficios" rows="7"></textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-4 col-md-offset-2">
+            <span>
+              <button class="btn btn-primary" id="Registrar" [disabled]="!cadastroVagaForm.valid" type="submit">Salvar Alterações</button>
+              <button class="btn btn-danger botao-voltar" (click)="voltarDashboard()">Voltar</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
 
 <app-rodape-admin></app-rodape-admin>
