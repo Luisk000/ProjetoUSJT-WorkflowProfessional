@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChildren } from '@ang
 import { FormBuilder, FormControlName, FormGroup, Validators } from '@angular/forms';
 import { DisplayMessage, GenericValidator, ValidationMessages } from 'src/app/Validacao/generic-form-validator';
 import { fromEvent, merge, Observable } from 'rxjs';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LoginRegistro } from '../Model-Login/loginRegistro';
 import { CustomValidators } from 'ng2-validation';
 
@@ -12,6 +12,8 @@ import { CustomValidators } from 'ng2-validation';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit, AfterViewInit {
+
+  public tipoUser: number;
 
   @ViewChildren(FormControlName, {read: ElementRef}) forInputElements: ElementRef[];
   
@@ -23,7 +25,8 @@ export class LoginComponent implements OnInit, AfterViewInit {
   displayMessage: DisplayMessage = {};  
 
   constructor(private fb: FormBuilder,    
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
     ) {    
 
     this.validationMessages = {
@@ -45,6 +48,11 @@ export class LoginComponent implements OnInit, AfterViewInit {
       email: ['', [Validators.required]],
       senha: ['', [Validators.required, CustomValidators.rangeLength([6, 15])]]      
     });
+
+    this.route.params
+    .subscribe(params => {      
+      this.tipoUser = params['id'];
+    });
   }
 
   ngAfterViewInit(): void {
@@ -58,13 +66,17 @@ export class LoginComponent implements OnInit, AfterViewInit {
 
   login() {
     if (this.loginForm.dirty && this.loginForm.valid) {
-      this.loginRegistro = Object.assign({}, this.loginRegistro, this.loginForm.value);      
+      this.loginRegistro = Object.assign({}, this.loginRegistro, this.loginForm.value);
+      this.irDashboard();      
     }
 
     console.log(this.loginRegistro);
   }
 
-  irDashboard(){}
+  irDashboard(){
+    if (this.tipoUser == 1) this.administrador();
+    else this.usuario();
+  }
 
   administrador(){
     this.router.navigate(['admin/home']);
@@ -75,7 +87,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
   }
 
   registrar(){
-    this.router.navigate(['registro']);
+    this.router.navigate([`registro/${this.tipoUser}`]);
   }
 
   voltarSelecao(){

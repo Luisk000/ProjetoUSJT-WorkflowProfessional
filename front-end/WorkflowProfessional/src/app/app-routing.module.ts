@@ -9,9 +9,9 @@ const routes: Routes = [
 
   { path: '', component: HomeComponent},
 
-  { path: 'registro', component: RegistroComponent},
+  { path: 'registro/:id', component: RegistroComponent},
 
-  { path: 'login', component: LoginComponent},
+  { path: 'login/:id', component: LoginComponent},
   
   { path: 'admin', loadChildren: () => import('./Telas/admin/admin-module').then(m => m.AdminModule) },
 

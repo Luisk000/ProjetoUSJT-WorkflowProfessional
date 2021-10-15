@@ -1,0 +1,27 @@
+.botao-voltar{
+    margin-left: 25px;
+    width: 100px;
+}
+
+.paragrafo{
+    margin-left: 15px;
+}
+
+h4{
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: -40px;
+}
+
+.botao-registro{
+    width: 100px;
+}
+
+.botao-login{
+    margin-left: 25px;
+    width: 200px;
+}
+
+.botoes{
+    margin-top: 50px;
+}
