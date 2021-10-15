@@ -4,9 +4,10 @@ import { UsuarioComponent } from './usuario.component';
 import { DashboardUsuarioComponent } from './dashboard-usuario/dashboard-usuario.component';
 import { AreasMaisComponent } from './areas-mais/areas-mais.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
-import { DetalhesVagasComponent } from './detalhes-vagas/detalhes-vagas.component';
+import { DetalhesVagasComponent } from './vagas-usuario/detalhes-vagas/detalhes-vagas.component';
 import { Top20Component } from './top-20/top-20.component';
-import { VagasUsuarioComponent } from './vagas-usuario/vagas-usuario.component';
+import { VagaUsuarioComponent } from './vagas-usuario/vaga-usuario/vaga-usuario.component';
+import { VagaComponent } from './vagas-usuario/vaga.component';
 
 const usuarioRouterConfig: Routes = [
   {
@@ -27,9 +28,11 @@ const usuarioRouterConfig: Routes = [
         ] 
       },
 
-      { path: 'vagas-usuario', component: VagasUsuarioComponent,
+      { path: 'vagas-usuario', component: VagaComponent,
         children: [
-            { path: 'detalhes-vagas-vaga', component: DetalhesVagasComponent },
+          { path: '', component: VagaUsuarioComponent },
+
+          { path: 'detalhes-vaga', component: DetalhesVagasComponent },
         ]
       }    
     ]

@@ -1,0 +1,62 @@
+.painel{
+    margin-top: -20px;
+    width: 1070px;
+    height: 650px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.detalhes-vaga{
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;        
+}
+
+.nome-vaga{
+    width: 500px;
+    height: 40px;
+    background-color: rgba(92, 70, 70, 0.5);
+    border-radius: 10px;    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.descricao{    
+    height: 450px;
+    width: 900px;
+    margin-top: 8px;
+    background-color: rgba(92, 70, 70, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao-voltar{    
+    width: 150px;
+}
+
+.botao-candidatar{    
+    width: 200px;
+}
+
+.botoes{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;    
+}

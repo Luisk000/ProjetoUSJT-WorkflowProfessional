@@ -156,3 +156,21 @@ h1{
     margin-bottom: 10px;
     margin-top: -15px;
 }
+
+.botao-visualizar{
+    width: 150px;
+}
+
+.filtros{
+    width: 900px;
+    height: 40px;    
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-detalhes-vagas',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalhesVagasComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  voltarVagasUsuario(){
+    this.router.navigate(['usuario/vagas-usuario']);
   }
 
 }

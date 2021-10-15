@@ -20,7 +20,7 @@ export class MenuUsuarioComponent implements OnInit {
     {
       link: '/usuario/vagas-usuario',
       name: 'Vagas',
-      exact: true,
+      exact: false,
       admin: false
     },
     {
