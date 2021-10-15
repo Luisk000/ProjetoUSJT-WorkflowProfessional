@@ -13,12 +13,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  administrador(){
-    this.router.navigate(['admin/home']);
-  }
-
-  usuario(){
-    this.router.navigate(['usuario/home']);
+  login(){
+    this.router.navigate(['login']);
   }
 
 }
