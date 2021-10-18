@@ -25,3 +25,14 @@ h4{
 .botoes{
     margin-top: 50px;
 }
+
+@media (max-width: 450px) and (min-width: 330px){
+    .botao-login{
+        width: 100px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 320px){
+    
+}
