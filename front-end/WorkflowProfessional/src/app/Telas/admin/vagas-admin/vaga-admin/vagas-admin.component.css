@@ -1,5 +1,6 @@
 .painel{
-    margin-top: -50px;
+    margin-top: -60px;
+    margin-bottom: auto;
     width: 1070px;
     height: 450px;
     display: flex;
@@ -19,9 +20,11 @@
     align-items: center;
 }
 
+
+
 .painel-corpo{
     width: 900px;
-    height: 390px;
+    height: 400px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -34,7 +37,7 @@ h1{
 }
 
 .linha{
-    width: 900px;
+    width: 700px;
     height: 40px;
     padding-bottom: 60px;
     display: flex;
@@ -84,6 +87,14 @@ h1{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.titulo-coluna-3{    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;   
 }
 
 .conteudo-coluna-1{    
@@ -186,5 +197,35 @@ h1{
     }
     .botoes{
         justify-content: center 10px;
+    }
+}
+
+@media (max-width:799px){
+    .painel{
+        width: auto;
+    }
+    .titulo-coluna-2{
+        border-radius: 10px;
+    }
+    .titulo-coluna-1{
+        width: 50px;
+    }
+    .titulos{    
+        width: 500px;
+    } 
+    .conteudo{    
+        width: 500px;
+    }
+    .botao-editar{
+        width: 45px;
+        height: 40px;
+        font-size: 10px;
+        text-align: auto;
+    }
+    .botao-voltar{
+        width: 45px;
+        height: 40px;
+        font-size: 10px;
+        text-align: auto;
     }
 }
