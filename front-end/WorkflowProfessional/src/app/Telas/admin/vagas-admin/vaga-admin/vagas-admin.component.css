@@ -33,6 +33,17 @@ h1{
     font-size: 30px;
 }
 
+.linha{
+    width: 900px;
+    height: 40px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .titulos{
     width: 900px;
     height: 40px;
@@ -49,7 +60,7 @@ h1{
 
 .conteudo{
     width: 900px;
-    height: 350px;
+    height: 400px;
     padding-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -64,7 +75,7 @@ h1{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: center;   
 }
 
 .titulo-coluna-2{    
@@ -128,7 +139,6 @@ h1{
 
 ::-webkit-scrollbar-track-piece{
     background-color: transparent;
-    -webkit-border-radius: 6px;
 }
 
 .botoes{
@@ -155,4 +165,26 @@ h1{
     width: 180px;
     margin-bottom: 10px;
     margin-top: -15px;
+}
+
+
+@media (max-width:1200px) and (min-width:800px){
+    .painel{
+        width: auto;
+    }
+    .titulos{    
+        width: 700px;
+    } 
+    .conteudo{    
+        width: 700px;
+    }
+    .botao-editar{
+        width: 70px;
+    }
+    .botao-voltar{
+        width: 70px;
+    }
+    .botoes{
+        justify-content: center 10px;
+    }
 }
