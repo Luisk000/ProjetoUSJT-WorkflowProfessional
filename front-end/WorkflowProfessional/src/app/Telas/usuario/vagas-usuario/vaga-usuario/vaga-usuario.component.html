@@ -1,116 +1,59 @@
 <app-menu-usuario></app-menu-usuario>
 
-<div class="container main-container">
-  <div class="container">
-    <div class="painel">
-      <div class="painel-topo">
-        <h1>Vagas</h1>
-      </div>
+<body class="body">
+  <div class="container main-container">
+    <div class="container">
+      <div class="painel">
+        <div class="painel-topo">
+          <h1>Vagas</h1>     
+            <input class="form-control topicos" id="filtros" type="text" placeholder="Filtros" formControlName="filtro"/>
+        </div>      
+  
+        <div *ngIf="true" class="painel-corpo">
+      
+        <ul class="nome">
+          <span>Analista de Sistemas</span>
+          <li class="descricao">Híbrido</li>
+          <button class="btn btn-warning botao-editar" (click)="visualizarVaga()">Visualizar</button>
+        </ul>
+  
+        <ul class="nome">
+          <span>Programador C#</span>
+          <li class="descricao">Trabalhar home office</li>
+          <button class="btn btn-warning botao-editar" (click)="visualizarVaga()">Visualizar</button>
+        </ul>
+  
+        <ul class="nome">
+          <span>Analista de Sistemas</span>
+          <li class="descricao">Híbrido</li>
+          <button class="btn btn-warning botao-editar" (click)="visualizarVaga()">Visualizar</button>
+        </ul>
+  
+        <ul class="nome">
+          <span>Programador C#</span>
+          <li class="descricao">Trabalhar home office</li>
+          <button class="btn btn-warning botao-editar" (click)="visualizarVaga()">Visualizar</button>
+        </ul>
+        <ul class="nome">
+          <span>Analista de Sistemas</span>
+          <li class="descricao">Híbrido</li>
+          <button class="btn btn-warning botao-editar" (click)="visualizarVaga()">Visualizar</button>
+        </ul>
+  
+        <ul class="nome">
+          <span>Programador C#</span>
+          <li class="descricao">Trabalhar home office</li>
+          <button class="btn btn-warning botao-editar" (click)="visualizarVaga()">Visualizar</button>
+        </ul>
 
-      <div class="row painel-corpo">
-        <div class="row titulos">
-          <div class="col-4 titulo-coluna-1"><span>Vaga</span></div>
-          <div class="col-5 titulo-coluna-2"><span>Descrição</span></div>
-          <div class="col-2 titulo-coluna-2"><span>Ação</span></div>
         </div>
-
-        <div class="row filtros">
-          <div class="col-4"><input class="form-control" id="vaga-filtro" type="text" placeholder="Vagas Filtro"></div>
-          <div class="col-5"><input class="form-control" id="descricao-filtro" type="text" placeholder="Descrição Filtro"></div>
-          <div class="col-2"></div>
+  
+          <div *ngIf="false" class="row conteudo">
+            <div class="col-6 sem-conteudo"><span>Não possui vagas cadastradas</span></div>        
+          </div>  
         </div>
-        
-        <div *ngIf="true" class="row conteudo">
-
-          <div class="col-4 conteudo-coluna-1"><span>Programador C#</span></div>
-          <div class="col-5 conteudo-coluna-2"><span>Trabalhar home office</span></div>
-          <div class="col-2 conteudo-coluna-3">
-            <span class="botoes">
-              <button class="btn btn-primary botao-visualizar" (click)="visualizarVaga()">Visualizar</button>              
-            </span>
-          </div>
-
-          <div class="col-4 conteudo-coluna-1"><span>Analista de Sistemas</span></div>
-          <div class="col-5 conteudo-coluna-2"><span>Híbrido</span></div>
-          <div class="col-2 conteudo-coluna-3">
-            <span class="botoes">
-              <button class="btn btn-primary botao-visualizar" (click)="visualizarVaga()">Visualizar</button>              
-            </span>
-          </div>
-
-          <div class="col-4 conteudo-coluna-1"><span>Programador C#</span></div>
-          <div class="col-5 conteudo-coluna-2"><span>Trabalhar home office</span></div>
-          <div class="col-2 conteudo-coluna-3">
-            <span class="botoes">
-              <button class="btn btn-primary botao-visualizar" (click)="visualizarVaga()">Visualizar</button>              
-            </span>
-          </div>
-
-          <div class="col-4 conteudo-coluna-1"><span>Analista de Sistemas</span></div>
-          <div class="col-5 conteudo-coluna-2"><span>Híbrido</span></div>
-          <div class="col-2 conteudo-coluna-3">
-            <span class="botoes">
-              <button class="btn btn-primary botao-visualizar" (click)="visualizarVaga()">Visualizar</button>              
-            </span>
-          </div>
-
-          <div class="col-4 conteudo-coluna-1"><span>Programador C#</span></div>
-          <div class="col-5 conteudo-coluna-2"><span>Trabalhar home office</span></div>
-          <div class="col-2 conteudo-coluna-3">
-            <span class="botoes">
-              <button class="btn btn-primary botao-visualizar" (click)="visualizarVaga()">Visualizar</button>              
-            </span>
-          </div>
-
-          <div class="col-4 conteudo-coluna-1"><span>Analista de Sistemas</span></div>
-          <div class="col-5 conteudo-coluna-2"><span>Híbrido</span></div>
-          <div class="col-2 conteudo-coluna-3">
-            <span class="botoes">
-              <button class="btn btn-primary botao-visualizar" (click)="visualizarVaga()">Visualizar</button>              
-            </span>
-          </div>
-
-          <div class="col-4 conteudo-coluna-1"><span>Programador C#</span></div>
-          <div class="col-5 conteudo-coluna-2"><span>Trabalhar home office</span></div>
-          <div class="col-2 conteudo-coluna-3">
-            <span class="botoes">
-              <button class="btn btn-primary botao-visualizar" (click)="visualizarVaga()">Visualizar</button>              
-            </span>
-          </div>
-
-          <div class="col-4 conteudo-coluna-1"><span>Analista de Sistemas</span></div>
-          <div class="col-5 conteudo-coluna-2"><span>Híbrido</span></div>
-          <div class="col-2 conteudo-coluna-3">
-            <span class="botoes">
-              <button class="btn btn-primary botao-visualizar" (click)="visualizarVaga()">Visualizar</button>              
-            </span>
-          </div>
-
-          <div class="col-4 conteudo-coluna-1"><span>Programador C#</span></div>
-          <div class="col-5 conteudo-coluna-2"><span>Trabalhar home office</span></div>
-          <div class="col-2 conteudo-coluna-3">
-            <span class="botoes">
-              <button class="btn btn-primary botao-visualizar" (click)="visualizarVaga()">Visualizar</button>              
-            </span>
-          </div>
-
-          <div class="col-4 conteudo-coluna-1"><span>Analista de Sistemas</span></div>
-          <div class="col-5 conteudo-coluna-2"><span>Híbrido</span></div>
-          <div class="col-2 conteudo-coluna-3">
-            <span class="botoes">
-              <button class="btn btn-primary botao-visualizar" (click)="visualizarVaga()">Visualizar</button>              
-            </span>
-          </div>
-          
-        </div>
-
-        <div *ngIf="false" class="row conteudo">
-          <div class="col-6 sem-conteudo"><span>Não possui vagas cadastradas</span></div>          
-        </div>
-
-      </div>
-    </div>    
-  </div>
-</div>
+      </div>   
+    </div>
+  </body>
 
 <app-rodape-usuario></app-rodape-usuario>
