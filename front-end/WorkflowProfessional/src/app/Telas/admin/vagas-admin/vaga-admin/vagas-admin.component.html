@@ -1,150 +1,67 @@
 <app-menu-admin></app-menu-admin>
-
+<body class="body">
 <div class="container main-container">
   <div class="container">
     <div class="painel">
       <div class="painel-topo">
         <h1>Vagas</h1>
+        <div class="linha-botao-cadastrar">        
+          <button class="btn btn-success botao-cadastrar" (click)="cadastrarVaga()">Cadastrar Vaga</button>
+        </div>
+      </div>      
+
+      <div *ngIf="true" class="painel-corpo">
+    
+      <ul class="nome">
+        <span>Analista de Sistemas</span>
+        <li class="descricao">Híbrido</li>
+        <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
+        <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
+      </ul>
+
+      <ul class="nome">
+        <span>Programador C#</span>
+        <li class="descricao">Trabalhar home office</li>
+        <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
+        <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
+      </ul>
+
+      <ul class="nome">
+        <span>Analista de Sistemas</span>
+        <li class="descricao">Híbrido</li>
+        <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
+        <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
+      </ul>
+
+      <ul class="nome">
+        <span>Programador C#</span>
+        <li class="descricao">Trabalhar home office</li>
+        <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
+        <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
+      </ul>
+
+      <ul class="nome">
+        <span>Analista de Sistemas</span>
+        <li class="descricao">Híbrido</li>
+        <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
+        <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
+      </ul>
+
+      <ul class="nome">
+        <span>Programador C#</span>
+        <li class="descricao">Trabalhar home office</li>
+        <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
+        <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
+      </ul>
       </div>
 
-      <div class="linha-botao-cadastrar">        
-        <button class="btn btn-success botao-cadastrar" (click)="cadastrarVaga()">Cadastrar Vaga</button>
-      </div>  
-
-      <table class="row painel-corpo">
-        <thead class="row titulos">
-            <th class="col-4 titulo-coluna-1" scope="col"><span>Vaga</span></th>
-            <th class="col-4 titulo-coluna-2" scope="col"><span>Descrição</span></th>
-            <th class="col-3 titulo-coluna-3" scope="col"><span>Ação</span></th>
-        </thead>
-        <tbody *ngIf="true" class="row conteudo">
-
-          <tr class="linha">
-            <td class="col-4 conteudo-coluna-1"><span>Analista de Sistemas</span></td>
-            <td class="col-4 conteudo-coluna-2"><span>Híbrido</span></td>
-            <td class="col-3 conteudo-coluna-3">
-              <span class="botoes">
-                <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-                <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
-              </span>
-            </td>
-          </tr>
-
-            <tr class="linha">
-              <td class="col-4 conteudo-coluna-1"><span>Programador C#</span></td>
-              <td class="col-4 conteudo-coluna-2"><span>Trabalhar home office</span></td>
-              <td class="col-3 conteudo-coluna-3">
-                <span class="botoes">
-                  <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-                  <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
-                </span>
-              </td>
-            </tr>
-            
-            <tr class="linha">
-              <td class="col-4 conteudo-coluna-1"><span>Programador C#</span></td>
-              <td class="col-4 conteudo-coluna-2"><span>Trabalhar home office</span></td>
-              <td class="col-3 conteudo-coluna-3">
-                <span class="botoes">
-                  <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-                  <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
-                </span>
-              </td>
-              <td>
-            </tr>
-
-            <tr class="linha">
-              <td class="col-4 conteudo-coluna-1"><span>Programador C#</span></td>
-              <td class="col-4 conteudo-coluna-2"><span>Trabalhar home office</span></td>
-              <td class="col-3 conteudo-coluna-3">
-                <span class="botoes">
-                  <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-                  <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
-                </span>
-              </td>
-              <td>
-            </tr>
-
-            <tr class="linha">
-              <td class="col-4 conteudo-coluna-1"><span>Programador C#</span></td>
-              <td class="col-4 conteudo-coluna-2"><span>Trabalhar home office</span></td>
-              <td class="col-3 conteudo-coluna-3">
-                <span class="botoes">
-                  <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-                  <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
-                </span>
-              </td>
-              <td>
-            </tr>
-
-            <tr class="linha">
-              <td class="col-4 conteudo-coluna-1"><span>Programador C#</span></td>
-              <td class="col-4 conteudo-coluna-2"><span>Trabalhar home office</span></td>
-              <td class="col-3 conteudo-coluna-3">
-                <span class="botoes">
-                  <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-                  <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
-                </span>
-              </td>
-              <td>
-            </tr>
-
-            <tr class="linha">
-              <td class="col-4 conteudo-coluna-1"><span>Programador C#</span></td>
-              <td class="col-4 conteudo-coluna-2"><span>Trabalhar home office</span></td>
-              <td class="col-3 conteudo-coluna-3">
-                <span class="botoes">
-                  <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-                  <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
-                </span>
-              </td>
-              <td>
-            </tr>
-
-            <tr class="linha">
-              <td class="col-4 conteudo-coluna-1"><span>Programador C#</span></td>
-              <td class="col-4 conteudo-coluna-2"><span>Trabalhar home office</span></td>
-              <td class="col-3 conteudo-coluna-3">
-                <span class="botoes">
-                  <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-                  <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
-                </span>
-              </td>
-              <td>
-            </tr>
-
-            <tr class="linha">
-              <td class="col-4 conteudo-coluna-1"><span>Programador C#</span></td>
-              <td class="col-4 conteudo-coluna-2"><span>Trabalhar home office</span></td>
-              <td class="col-3 conteudo-coluna-3">
-                <span class="botoes">
-                  <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-                  <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
-                </span>
-              </td>
-              <td>
-            </tr>
-
-            <tr class="linha">
-              <td class="col-4 conteudo-coluna-1"><span>Programador C#</span></td>
-              <td class="col-4 conteudo-coluna-2"><span>Trabalhar home office</span></td>
-              <td class="col-3 conteudo-coluna-3">
-                <span class="botoes">
-                  <button class="btn btn-warning botao-editar" (click)="editarVaga()">Editar</button>
-                  <button class="btn btn-danger botao-voltar" (click)="abrirExclusao()">Excluir</button>
-                </span>
-              </td>
-              <td>
-            </tr>      
-        </tbody>
-        <tbody *ngIf="false" class="row conteudo">
-          <td class="col-6 sem-conteudo"><span>Não possui vagas cadastradas</span></td>        
-        </tbody>  
-      </table>
+        <div *ngIf="false" class="row conteudo">
+          <div class="col-6 sem-conteudo"><span>Não possui vagas cadastradas</span></div>        
+        </div>  
       </div>
     </div>   
   </div>
-
+</body>
  
 <!-- MODAL DETALHES -->
 
